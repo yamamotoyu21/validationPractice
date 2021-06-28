@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+	<meta charset="UTF-8">
+	//viewportってなんだ？
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<title>Title</title>
+</head>
+<body class = "bg-light">
+	<div class= "container">
+		<div class ="row justify-content-center">
+		<div class ="col-md-8">
+		 <h4 class ="border-bottom my-3" th:text="#{inquiryForm}">
+		 </h4>
+		 
+		 <p class="text-danger" th:text="#{confirmationMessage}"></p>
+		 
+		 <div th:object="${inquiryForm}">
+		 	<div class="mb-3">
+		 		<label for = "password" th:text="#{name}"></label>
+		 		<input type="text" class="form-controll"
+		 		th:field="*{name}" disabled>
+		 	</div>
+		 	
+		 	<div class="mb-3">
+		 		<label for = "email" th:text="#{email}"></label>
+		 		<input type="email" class="form-controll"
+		 		th:firld="*{email}" disabled>
+		 	</div>	
+		 	
+		 	<div class="mb-3">
+		 		<label for = "inquiry" th:text="#{inquiry}"></label>
+		 		<textarea type="email" class="form-controll"
+		 		th:firld="*{email}" disabled>
+		 		</textarea>
+		 	</div>	
+		 </div>
+		</div>
+		</div>
+	</div>
+	
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+</html>
+		 	
+		 	
+		 		
+		 
+		 
